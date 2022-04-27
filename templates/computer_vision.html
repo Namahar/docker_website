@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="/static/computer_vision.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.0/socket.io.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  
+  <title>Saeed Rahaman</title>
+</head>
+
+<body class="container">
+   
+   <div class="main" id="content">
+
+      <div class="info">
+         <h1>What Function to Perform?</h1>
+      </div>
+
+      <div class="cvFunctions">
+         <input type="file" id="edges" accept="image/*">
+         <label for="edges" class="function" id="edgeLabel">Edge Detection</label>
+
+         <input type="file" id="segments" accept="image/*">
+         <label for="segments" class="function" id="segmentLabel">Image Segmentation</label>
+      </div>
+
+   </div>
+
+   <script type="text/javascript" src="/static/computer_vision.js"></script>
+</body>
+
+</html>

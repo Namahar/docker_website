@@ -1,0 +1,519 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #976666;
+}
+
+
+/* css for nav bar  */
+.header {
+    background: #2a2a2b;
+    height: 50px;
+    color: #fff;
+    top: 0%;
+    width: 100vw;
+    position: fixed;
+    z-index: 150;
+}
+
+.name {
+    padding: 0 20px;
+    line-height: 50px;
+    float: left;
+    margin: 0;
+}
+
+.menu {
+    line-height: 50px;
+    float: right;
+    padding-right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-size: 16pt;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+    color: #a9a9a9;
+    text-decoration: underline;
+}
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 50px;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+.active {
+    text-decoration: underline !important; 
+}
+
+@media screen and (max-width: 800px) {
+
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+        padding-right: 10px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.4s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+}
+
+
+
+/* css for splash page  */
+
+.splash {
+    margin-top: 50px;
+    height: 100vh;
+}
+
+.splash-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.introduction {
+    padding-left: 5em;
+    font-size: x-large;
+}
+
+.tagline {
+    width: 500px;
+}
+
+.scrollDown {
+    flex-basis: 100%;
+    height: 0;
+
+}
+
+.scrollDown h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .scrollDown {
+        display: none;
+    }
+
+    .introduction {
+        padding-left: 0em;
+    }
+}
+
+
+
+/* css for about section */
+
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about p {
+    padding: 0.5em 0 0.5em 0;
+}
+
+.info {
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 16pt;
+    font-family: 'Times New Roman', Times, serif;
+    background: #313840;
+    padding: 40px;
+    box-shadow: 0 0 30px #000000;
+    color: #fff;
+    width: 50vw;
+}
+
+.about h1 {
+    margin: 0 auto;
+    text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        height: 100%;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
+
+
+/* css for project section  */
+.projects {
+    padding-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.project-content {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   padding: 10px 0px 10px 0px;
+   width: 100vw;
+}
+
+/* needed to create space between rows */
+.project-content>* {
+   margin: 10px;
+}
+
+.project-content a{
+   text-decoration: none;
+   color: #23aea4;
+}
+
+.project-content a:hover {
+   text-decoration: underline;
+}
+
+.project-content h1 {
+    padding-bottom: 0.5em;
+}
+
+.project-content p {
+    padding-top: 1em;
+}
+
+.project-card {
+   width: 400px;
+   height: 350px;
+   background-color: #313840;
+   text-align: center;
+   box-shadow: 0 0 30px #000000;
+   transition: transform 0.2s linear;
+   color: #fff;
+}
+
+.project-card:hover {
+   transform: scale(1.1);
+}
+
+.project-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.project-card h1 {
+    margin: 0;
+}
+
+
+.preview {
+   width: 100%;
+   height: 200px;
+   background-size: cover;
+   background-position: center;
+}
+
+#discord {
+   background-image: url(project_thumbnails/discord-logo.jpg);
+}
+
+#matrix {
+   background-image: url(project_thumbnails/matrix.jpg);
+}
+
+#tictactoe {
+   background-image: url(project_thumbnails/ttt.jpg);
+}
+
+#chess {
+   background-image: url(project_thumbnails/chess.jpg);
+}
+
+#face-detection {
+   background-image: url(project_thumbnails/face.jpg);
+}
+
+#telegram {
+   background-image: url(project_thumbnails/telegram-logo.jpg);
+}
+
+#youtube-dl {
+   background-image: url(project_thumbnails/youtube.jpeg);
+}
+
+#transcribe {
+   background-image: url(project_thumbnails/audio.jpeg);
+}
+
+#computer-vision {
+   background-image: url(project_thumbnails/cv.png);
+}
+
+#sudoku {
+   background-image: url(project_thumbnails/sudoku.png);
+}
+
+#shortest_route {
+   background-image: url(project_thumbnails/route.png);
+}
+
+#summarize {
+    background-image: url(project_thumbnails/nlp.png);
+}
+
+
+/* css for resume section  */
+.resume {
+    display: flex;
+    justify-content: center;
+    font-family: 'Mulish', sans-serif;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page {
+    background-color: white;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px 10px #000000;
+}
+
+.resume-section {
+    text-decoration: underline;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
+.resume-header {
+    text-align: center;
+}
+
+.heading-label {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.time {
+    float: right;
+    padding-right: 20px;
+    /* padding-right: calc(25vw / 10); */
+}
+
+.edu-list {
+    padding-bottom: 10px;
+}
+
+.no-bullet {
+    list-style: none;
+}
+
+.project-list {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.project-title {
+    font-weight: bold;
+}
+
+.skill-list {
+    float: left;
+}
+
+.cv-form {
+    padding-top: 25px;
+}
+
+.download-cv {
+    width: 300px;
+    height: 50px;
+    border: None;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #12bd03;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+ }
+
+ .download-cv:hover {
+    box-shadow: inset 500px 0 0 0 #12bd03;
+ }
+
+ 
+ @media screen and (max-width: 800px) {
+    .page {
+        display: none;
+    }
+
+    .download-cv {
+        background-color: #313840;
+        animation-name: colorChange;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes colorChange {
+        0%  {background-color: #313840;}
+        50%  {background-color: #a9a9a9;}
+      }
+
+}
+
+/* css for contact section  */
+.contact {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sent {
+    display: none;
+    padding: 25px;
+}
+
+#alert {
+        color: #2ecc71;
+}
+
+#error, #name, #email, #message {
+    color: #ff0000;
+}
+
+.inner-width{
+    max-width: 600px;
+    margin: auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.email-title {
+    font-size: 20px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.input-name,.input-email,.input-message{
+    background: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 6px;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.input-name{
+    width: 278px;
+    margin-top: 15px;
+}
+
+.input-email{
+    width: 270px;
+    margin-top: 15px;
+}
+
+.input-message{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.inner-width input:focus, 
+.inner-width textarea:focus {
+    border-color: #2ecc71;
+    transition: 250ms linear;
+}
+
+.email-button {
+    background: none;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    padding: 12px 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.4s linear;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.info button:hover {
+    background: #70a1ff;
+    color: #fff;
+}
+
+
+@media screen and (max-width:600px) {
+    .input-name,.input-email{
+        width: 100%;
+    }
+}
